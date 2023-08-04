@@ -3,7 +3,6 @@ package com.example.basiccalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -25,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClick(View view) {
-        Log.d("TAG","ID "+ view.getId());
 
         int id = view.getId();
         if (id == R.id.button0){
