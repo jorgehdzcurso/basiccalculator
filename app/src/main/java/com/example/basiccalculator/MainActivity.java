@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    String display = "";
+    String displayText="";
     TextView tv_display;
 
     @Override
@@ -20,67 +20,65 @@ public class MainActivity extends AppCompatActivity {
         tv_display.setText("");
     }
 
-
-
-
     public void onClick(View view) {
 
         int id = view.getId();
         if (id == R.id.button0){
-            display +="0";
+            displayText +="0";
         }
         else if (id == R.id.button1) {
-            display +="1";
+            displayText +="1";
         }
         else if (id == R.id.button2) {
-            display +="2";
+            displayText +="2";
         }
         else if (id == R.id.button3) {
-            display +="3";
+            displayText +="3";
         }
         else if (id == R.id.button4) {
-            display +="4";
+            displayText +="4";
         }
         else if (id == R.id.button5) {
-            display +="5";
+            displayText +="5";
         }
         else if (id == R.id.button6) {
-            display +="6";
+            displayText +="6";
         }
         else if (id == R.id.button7) {
-            display +="7";
+            displayText +="7";
         }
         else if (id == R.id.button8) {
-            display +="8";
+            displayText +="8";
         }
         else if (id == R.id.button9) {
-            display +="9";
+            displayText +="9";
         }
         else if (id == R.id.buttonAdd) {
-            display +="+";
+            displayText +="+";
         }
         else if (id == R.id.buttonSub) {
-            display +="-";
+            displayText +="-";
         }
         else if (id == R.id.buttonMul) {
-            display +="x";
+            displayText +="x";
         }
         else if (id == R.id.buttonDiv) {
-            display +="/";
+            displayText +="/";
         }
         else if (id == R.id.buttonAc) {
-            display ="";
+            displayText ="";
         }
         else if (id == R.id.buttonBack) {
-            if (display.length()>0) {
-                display = display.substring(0, display.length()-1);
+            int lenght = displayText.length();
+            if (lenght>0) {
+                displayText = displayText.substring(0, lenght-1);
             }
         }
         else if (id == R.id.buttonCalc) {
 
         }
 
-        tv_display.setText(display);
+        tv_display.setText(displayText);
 
     }
 }
